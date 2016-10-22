@@ -1,0 +1,115 @@
+<p>
+Omega <span *ngIf="rage" style="color:red">RAGED</span>
+      <span class="power-attack" *ngIf="powerAttack" style="color:blue">POWER ATTACK</span>
+      <span class="power-attack" *ngIf="GODMODE" style="color:green">GODMODE</span>
+</p>
+<label>level</label>
+<input class="inputClass" [(ngModel)]="level">
+<br>
+<label>Strength</label>
+<label>score</label>
+<input class="inputClass" [(ngModel)]="STR.score">
+<label>Modifier</label>
+<span style="background-color:lightgrey"> {{(STR.score -10)/2 }} </span>
+<!--<input class="inputClass" [(ngModel)]="STR.modifier"> -->
+
+<br>
+<br>
+<!-------------------------->
+<label>Dex</label>
+<label>score</label>
+<input class="inputClass" [(ngModel)]="DEX.score">
+<label>Modifier</label>
+<input class="inputClass" [(ngModel)]="DEX.modifier">
+<br>
+<br>
+<!-------------------------->
+<label>Con</label>
+<label>score</label>
+<input class="inputClass" [(ngModel)]="CON.score">
+<label>Modifier</label>
+<input class="inputClass" [(ngModel)]="CON.modifier">
+<br>
+<br>
+<!-------------------------->
+<label>INT</label>
+<label>score</label>
+<input class="inputClass" [(ngModel)]="INT.score">
+<label>Modifier</label>
+<input class="inputClass" [(ngModel)]="INT.modifier">
+<br>
+<br>
+<!-------------------------->
+<label>WIS</label>
+<label>score</label>
+<input class="inputClass" [(ngModel)]="WIS.score">
+<label>Modifier</label>
+<input class="inputClass" [(ngModel)]="WIS.modifier">
+<br>
+<br>
+<!-------------------------->
+<label>CHA</label>
+<label>score</label>
+<input class="inputClass" [(ngModel)]="CHA.score">
+<label>Modifier</label>
+<input class="inputClass" [(ngModel)]="CHA.modifier">
+<br>
+<br>
+
+<!-------------------------->
+<label>Fortitude</label>
+<label>Total</label> |{{Fortitude.base - - Fortitude.ability - - Fortitude.resist}}|
+<label>base</label>
+<input class="inputClass" [(ngModel)]="Fortitude.base">
+<label>ability</label>
+<input class="inputClass" [(ngModel)]="Fortitude.ability">
+<label>resist</label>
+<input class="inputClass" [(ngModel)]="Fortitude.resist">
+<br>
+<br>
+
+<!-------------------------->
+<label>Reflex</label>
+<label>Total</label> |{{Reflex.base - - Reflex.ability - - Reflex.resist}}|
+<label>base</label>
+<input class="inputClass" [(ngModel)]="Reflex.base">
+<label>ability</label>
+<input class="inputClass" [(ngModel)]="Reflex.ability">
+<label>resist</label>
+<input class="inputClass" [(ngModel)]="Reflex.resist">
+<br>
+<br>
+
+<!-------------------------->
+<label>Will</label>
+<label>Total</label> |{{Will.base - - Will.ability - - Will.resist}}|
+<label>base</label>
+<input class="inputClass" [(ngModel)]="Will.base">
+<label>ability</label>
+<input class="inputClass" [(ngModel)]="Will.ability">
+<label>resist</label>
+<input class="inputClass" [(ngModel)]="Will.resist">
+<br>
+<br>
+
+<label>AC</label>
+<input class="inputClass" [(ngModel)]="AC"><br>
+<label>Touch AC</label><input class="inputClass" [(ngModel)]="TouchAC"><br>
+<label>Base Attack</label><input class="inputClass" [(ngModel)]="baseAttack"><br>
+<label>Initiative</label><input class="inputClass" [(ngModel)]="initiative"><br>
+
+<label>+2 Shocking Burst Mithral Greatsword</label><br>
+<!--+2 FOR MITHRIL GREATSORT-->
+
+<label>Both hands:</label><span style="background-color:lightgrey"><span>{{((STR.score -10)/2)+baseAttack +3}}</span> / <span>{{((STR.score -10)/2)+baseAttack +2 -5}}</span> 2d6+{{1.5 * modifier() + 2 +powerAttackBonus}} +1d6 Electrical</span><br>
+
+<button type="button" class="btn btn-danger" (click)="Rage()">Rage</button>
+<button type="button" class="btn btn-primary" (click)="PowerAttack()">Power Attack</button>
+<button type="button" class="btn btn-primary" (click)="godMode()">God Mode</button>
+
+
+
+
+
+
+
